@@ -6,8 +6,8 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:26:45 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/04 17:43:10 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:32:20 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef int size_t;
+typedef unsigned int size_t;
