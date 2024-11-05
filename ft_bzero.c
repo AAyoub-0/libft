@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:12:55 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/05 15:29:39 by aboumall         ###   ########.fr       */
+/*   Created: 2024/11/05 15:02:21 by aboumall          #+#    #+#             */
+/*   Updated: 2024/11/05 15:29:50 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+    size_t	i;
 	void *tab;
 
 	i = 0;
 	tab = s;
 	while(i < n)
 	{
-		*(unsigned char *)s = (unsigned char)c;
-		s += sizeof(*s);
-		i += sizeof(*s);
+		*(unsigned char *)tab = (unsigned char)0;
+		tab += sizeof(*tab);
+		i += sizeof(*tab);
 	}
-	return (tab);
 }
 
 int main(void)
@@ -43,7 +42,7 @@ int main(void)
     printf( "\n" );
 
     /* Reset the memory bloc */
-    ft_memset( array, 0, size );
+    ft_bzero( array, size );
 
     /* Display the new values */
     for( length=0; length<5; length++) {
