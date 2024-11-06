@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:21:10 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 11:44:30 by aboumall         ###   ########.fr       */
+/*   Created: 2024/11/06 11:43:34 by aboumall          #+#    #+#             */
+/*   Updated: 2024/11/06 12:50:54 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_toupper(int c)
 {
-	return (c >= 48 && c <= 57);
+	if (!(c >= 97 && c <= 122))
+		return (c);
+	return (c - 32);
 }
 
 int	main(void)
 {
-	printf("%d", ft_isdigit('s'));
+	unsigned char   c = 'a';
+
+	printf("%c", ft_toupper(c));
 }

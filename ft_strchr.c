@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:45:15 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 11:28:29 by aboumall         ###   ########.fr       */
+/*   Created: 2024/11/06 12:52:35 by aboumall          #+#    #+#             */
+/*   Updated: 2024/11/06 13:25:56 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <string.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *tab)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	size;
+	int	i;
 
-	size = 0;
-	while (tab[size])
-		size++;
-	return (size);
+	i = 0;
+	if (c == 0)
+		return (&s[ft_strlen(s)]);
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (&s[i]);
+		i++;
+	}
+	return ('\0');
 }
 
-int	main(void)
-{
-	char tab[] = "0123456789";
+// int     main(void)
+// {
+//         char    str[] = "Hello world !";
+//         char    c = 'z';
 
-	printf("%d", ft_strlen(tab));
-}
+//         printf("ft_strchr : $%s", ft_strchr(str, c));
+//         // printf("\nstrchr : $%s", strchr(str, c));
+// }

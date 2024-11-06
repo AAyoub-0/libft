@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:28:47 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 11:34:00 by aboumall         ###   ########.fr       */
+/*   Created: 2024/11/06 11:13:10 by aboumall          #+#    #+#             */
+/*   Updated: 2024/11/06 11:39:51 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,34 @@ static size_t ft_strlen(const char *str)
     return (size);
 }
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
     size_t i;
+    size_t dst_len;
+    size_t src_len;
 
+    dst_len = ft_strlen(dst);
+    src_len = ft_strlen(src);
     i = 0;
-    while(src[i] != '\0' && size > i)
+    while(src[i] && size > i)
     {
-        dst[i] = src[i];
+        dst[i + dst_len] = src[i];
         i++;
     }
-    dst[i] = '\0';
-    return (ft_strlen(src));
+    dst[i + dst_len] = '\0';
+    return (dst_len + src_len);
 }
 
 int main(void)
 {
-    char dest[] = "";
-    char dest1[] = "";
-    char src[] = "test strlcpy";
-    char src1[] = "test strlcpy";
+    char dest[20] = "test ";
+    char dest1[20] = "test ";
+    char src[] = "strlcpy";
+    char src1[] = "strlcpy";
     int sizeeeee = 4;
 
-    size_t size = strlcpy(dest, src, sizeeeee);
-    size_t size1 = ft_strlcpy(dest, src, sizeeeee);
-    printf("strlcpy : return : %u, dest : %s", size, dest);
-    printf("\nft_strcpy : return : %u, dest : %s", size, dest);
+    size_t size = strlcat(dest, src, sizeeeee);
+    size_t size1 = ft_strlcat(dest, src, sizeeeee);
+    printf("strlcat : return : %u, dest : %s", size, dest);
+    printf("\nft_strlcat : return : %u, dest : %s", size, dest);
 }

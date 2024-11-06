@@ -6,11 +6,11 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:39:01 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/04 17:19:06 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:44:26 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
