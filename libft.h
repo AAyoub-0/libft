@@ -6,10 +6,8 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:26:45 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 13:18:43 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:42:25 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 typedef long unsigned int size_t;
-
-size_t	ft_strlen(const char *tab);

@@ -6,20 +6,31 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:52:35 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 13:25:56 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:45:13 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
+#include <string.h>
 #include "libft.h"
+
+size_t	ft_strlen(const char *tab)
+{
+	size_t	size;
+
+	size = 0;
+	while (tab[size])
+		size++;
+	return (size);
+}
 
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
+	i = ft_strlen(s);
 	if (c == 0)
-		return (&s[ft_strlen(s)]);
+		return (&s[i]);
+        i = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -29,11 +40,11 @@ char	*ft_strchr(const char *s, int c)
 	return ('\0');
 }
 
-// int     main(void)
-// {
-//         char    str[] = "Hello world !";
-//         char    c = 'z';
+int     main(void)
+{
+        char    str[] = "Hello world !";
+        char    c = 'z';
 
-//         printf("ft_strchr : $%s", ft_strchr(str, c));
-//         // printf("\nstrchr : $%s", strchr(str, c));
-// }
+        printf("ft_strchr : $%s<", ft_strchr(str, c));
+        printf("\nstrchr : $%s<", strchr(str, c));
+}
