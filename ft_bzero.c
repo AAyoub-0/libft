@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:02:21 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/05 15:29:50 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:04:03 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void ft_bzero(void *s, size_t n)
 {
-    size_t	i;
-	void *tab;
+	size_t  i;
+	unsigned char   *tab;
 
 	i = 0;
-	tab = s;
+	tab = (unsigned char *)s;
 	while(i < n)
 	{
-		*(unsigned char *)tab = (unsigned char)0;
-		tab += sizeof(*tab);
-		i += sizeof(*tab);
+		tab[i] = (unsigned char)0;
+                i++;
 	}
+	return (s);
 }
 
 int main(void)

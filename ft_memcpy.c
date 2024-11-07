@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:08:31 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/05 15:31:20 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:06:08 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	void *tab;
+	unsigned char *c_dest;
+	unsigned char *c_src;
 
 	i = 0;
-	tab = dest;
+	c_dest = (unsigned char *)dest;
+	c_src = (unsigned char *)src;
 	while(i < n)
 	{
-		*(unsigned char *)tab = *(unsigned char *)src;
-		src += sizeof(*src);
-		tab += sizeof(*tab);
-		i += sizeof(*tab);
+		c_dest[i] = c_src[i];
+		i++;
 	}
 	return (dest);
 }
