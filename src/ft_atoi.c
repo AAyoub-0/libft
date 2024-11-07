@@ -6,14 +6,11 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:27:51 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/07 16:00:53 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/07 20:11:01 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_isdigit(int c)
-{
-	return (c >= 48 && c <= 57);
-}
+#include "libft.h"
 
 int     ft_atoi(const char *nptr)
 {
@@ -44,8 +41,5 @@ int     ft_atoi(const char *nptr)
 
 int     main(void)
 {
-        char    d[] = "\t\t\t\t\t\n\n\n\n\n\n   -+1 2";
 
-        printf("%d", atoi(d));
-        printf("\n%d", ft_atoi(d));
 }
