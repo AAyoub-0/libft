@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:57:37 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 15:41:30 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:26:28 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ void    *ft_memchr(const void *s, int c, size_t n)
         size_t  i;
         unsigned char*  str;
 
-	// i = ft_strlen(s);
-	// if (c == 0)
-	// 	return (&s[i]);
         i = 0;
         str = (unsigned char *)s;
 	while (str[i])
