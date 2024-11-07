@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:13:10 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 11:39:51 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:38:46 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,31 @@ static size_t ft_strlen(const char *str)
     return (size);
 }
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t i;
-    size_t dst_len;
-    size_t src_len;
+	size_t	i;
+	size_t	dest_size;
+	size_t	src_size;
 
-    dst_len = ft_strlen(dst);
-    src_len = ft_strlen(src);
-    i = 0;
-    while(src[i] && size > i)
-    {
-        dst[i + dst_len] = src[i];
-        i++;
-    }
-    dst[i + dst_len] = '\0';
-    return (dst_len + src_len);
+	i = 0;
+	dest_size = 0;
+	src_size = 0;
+	while (dst[dest_size])
+		dest_size++;
+	while (src[src_size])
+		src_size++;
+	if (size == 0 || size < dest_size)
+		return (src_size + size);
+	while (src[i] && (dest_size + i) < size - 1)
+	{
+		dst[dest_size + i] = src[i];
+		i++;
+	}
+	dst[dest_size + i] = '\0';
+	return (dest_size + src_size);
 }
 
-int main(void)
+int     main(void)
 {
     char dest[20] = "test ";
     char dest1[20] = "test ";
