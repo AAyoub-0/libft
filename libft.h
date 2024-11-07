@@ -6,8 +6,10 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:26:45 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 14:42:25 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:04:20 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 typedef long unsigned int size_t;
