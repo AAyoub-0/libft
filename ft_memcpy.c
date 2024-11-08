@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:08:31 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/08 17:33:30 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:37:10 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int main(void)
+/* int main(void)
 {
 	int dest [] = { 0, 0, 0, 0, 0 };
 	int src [] = { 54, 85, 20, 63, 21 };
@@ -49,4 +49,4 @@ int main(void)
 	printf( "\n" );
 
 	return (0);
-}
+} */
