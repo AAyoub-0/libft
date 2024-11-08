@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:52:35 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/08 13:18:50 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:19:54 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	return ('\0');
+	return ((char *)0);
 }
 
 /* int     main(void)
