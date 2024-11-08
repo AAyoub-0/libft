@@ -6,22 +6,22 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:08:31 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/07 14:06:08 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:57:04 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	unsigned char *c_dest;
-	unsigned char *c_src;
+	size_t			i;
+	unsigned char	*c_dest;
+	unsigned char	*c_src;
 
 	i = 0;
 	c_dest = (unsigned char *)dest;
 	c_src = (unsigned char *)src;
-	while(i < n)
+	while (i < n)
 	{
 		c_dest[i] = c_src[i];
 		i++;
@@ -29,27 +29,24 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int main(void)
+/* int main(void)
 {
 	int dest [] = { 0, 0, 0, 0, 0 };
 	int src [] = { 54, 85, 20, 63, 21 };
-    size_t size = sizeof( int ) * 5;
-    int length;
+	size_t size = sizeof( int ) * 5;
+	int length;
 
-    /* Display the initial values */
-    for( length=0; length<5; length++) {
-        printf( "%d ", dest[ length ] );
-    }
-    printf( "\n" );
+	for( length=0; length<5; length++) {
+		printf( "%d ", dest[ length ] );
+	}
+	printf( "\n" );
 
-    /* Reset the memory bloc */
-    ft_memcpy( dest, src, size );
+	ft_memcpy( dest, src, size );
 
-    /* Display the new values */
-    for( length=0; length<5; length++) {
-        printf( "%d ", dest[ length ] );
-    }
-    printf( "\n" );
-    
-    return 0;
-}
+	for( length=0; length<5; length++) {
+		printf( "%d ", dest[ length ] );
+	}
+	printf( "\n" );
+
+	return (0);
+} */

@@ -6,13 +6,13 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:53:07 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 11:53:58 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:57:30 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (!(c >= 65 && c <= 90))
-        return (c);
-    return (c + 32);
+	if (!(c >= 65 && c <= 90))
+		return (c);
+	return (c + 32);
 }

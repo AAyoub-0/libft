@@ -6,24 +6,13 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:13:10 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/07 14:38:46 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:57:19 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <bsd/string.h>
+#include "libft.h"
 
-static size_t ft_strlen(const char *str)
-{
-    size_t size;
-    
-    size = 0;
-    while(str[size])
-        size++;
-    return (size);
-}
-
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dest_size;
@@ -47,16 +36,16 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
 	return (dest_size + src_size);
 }
 
-int     main(void)
+/* int     main(void)
 {
-    char dest[20] = "test ";
-    char dest1[20] = "test ";
-    char src[] = "strlcpy";
-    char src1[] = "strlcpy";
-    int sizeeeee = 4;
+	char dest[20] = "test ";
+	char dest1[20] = "test ";
+	char src[] = "strlcpy";
+	char src1[] = "strlcpy";
+	int sizeeeee = 4;
 
-    size_t size = strlcat(dest, src, sizeeeee);
-    size_t size1 = ft_strlcat(dest, src, sizeeeee);
-    printf("strlcat : return : %u, dest : %s", size, dest);
-    printf("\nft_strlcat : return : %u, dest : %s", size, dest);
-}
+	size_t size = strlcat(dest, src, sizeeeee);
+	size_t size1 = ft_strlcat(dest, src, sizeeeee);
+	printf("strlcat : return (: %u, dest : %s", size, dest));
+	printf("\nft_strlcat : return (: %u, dest : %s", size, dest));
+} */

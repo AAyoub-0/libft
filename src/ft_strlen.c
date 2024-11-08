@@ -6,13 +6,13 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:45:15 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 15:19:16 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:57:24 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *tab)
+size_t	ft_strlen(const char *tab)
 {
 	size_t	size;
 
@@ -22,9 +22,9 @@ size_t  ft_strlen(const char *tab)
 	return (size);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char tab[] = "0123456789";
 
 	printf("%ld", ft_strlen(tab));
-}
+} */

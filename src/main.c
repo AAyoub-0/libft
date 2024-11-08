@@ -6,16 +6,12 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 20:11:37 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/07 20:11:50 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:57:40 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     main(void)
+int	main(void)
 {
-        char    d[] = "\t\t\t\t\t\n\n\n\n\n\n   -+1 2";
-
-        printf("%d", atoi(d));
-        printf("\n%d", ft_atoi(d));
 }

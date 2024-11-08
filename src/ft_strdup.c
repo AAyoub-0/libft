@@ -6,45 +6,35 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:28:37 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/07 17:27:04 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:57:16 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t  ft_strlen(const char *tab)
+char	*ft_strdup(const char *s)
 {
 	size_t	size;
+	char	*dup;
+	int		i;
 
-	size = 0;
-	while (tab[size] != '\0')
-		size++;
-	return (size);
+	i = 0;
+	size = ft_strlen(s) + 1;
+	dup = (char *)malloc(size * sizeof(char));
+	while (s[i])
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }
 
-char    *ft_strdup(const char *s)
+/* int     main(void)
 {
-        size_t  size;
-        char    *dup;
-        int     i;
+		char    src[] = "Bonjour";
+		char    *dup;
 
-        i = 0;
-        size = ft_strlen(s) + 1;
-        dup = (char *)malloc(size * sizeof(char));
-        while (s[i])
-        {
-                dup[i] = s[i];
-                i++;
-        }
-        dup[i] = '\0';
-        return (dup);
-}
-
-int     main(void)
-{
-        char    src[] = "Bonjour";
-        char    *dup;
-
-        dup = ft_strdup(src);
-        printf("%s", dup);
-}
+		dup = ft_strdup(src);
+		printf("%s", dup);
+} */

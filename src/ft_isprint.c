@@ -6,16 +6,11 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:42:19 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/06 11:44:33 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:55:25 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
-}
-
-int	main(void)
-{
-	printf("%d", ft_isprint(32));
 }
