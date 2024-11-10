@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:47:29 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/08 13:24:30 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/10 02:31:59 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,30 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
-		while (big[i + j] == little[j] && j != len && little[j])
-		{
-			if (little[j + 1] == '\0')
-				return ((char *)&big[i]);
+		while (big[i + j] == little[j] && (little[j] && big[i + j])
+			&& (i + j < len))
 			j++;
-		}
-		j = 0;
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
+		else
+			j = 0;
 		i++;
 	}
 	return ((char *)0);
 }
+
+// int main(void)
+// {
+// 	char haystack[30] = "aaabcabcd";
+// 	char needle[10] = "cd";
+// 	char * empty = (char*)"";
+
+// 	char *result = ft_strnstr(haystack, needle, 8);
+// 	printf("$%s<\n", result);
+// 	if (result == NULL)
+// 		write(1, "OK", 2);
+// 	else
+// 		write(1, "KO", 2);
+// 	write(1, "\n", 1);
+// 	return (0);
+// }
