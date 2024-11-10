@@ -6,40 +6,46 @@
 /*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:07:25 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/10 02:44:15 by aayoub           ###   ########.fr       */
+/*   Updated: 2024/11/10 02:51:04 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	copy_f(unsigned char *dest,
+	const unsigned char *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+}
+
+static void	copy_b(unsigned char *dest,
+	const unsigned char *src, size_t n)
+{
+	size_t	i;
+
+	i = n;
+	while (i > 0)
+	{
+		dest[i - 1] = src[i - 1];
+		i--;
+	}
+}
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*c_dest;
-	unsigned char	*c_src;
-
 	if (!dest && !src)
 		return (NULL);
-	c_dest = (unsigned char *)dest;
-	c_src = (unsigned char *)src;
-	if (c_dest < c_src)
-	{
-		i = 0;
-		while (i < n)
-		{
-			c_dest[i] = c_src[i];
-			i++;
-		}
-	}
+	if (dest < src)
+		copy_f((unsigned char *)dest, (const unsigned char *)src, n);
 	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			c_dest[i - 1] = c_src[i - 1];
-			i--;
-		}
-	}
+		copy_b((unsigned char *)dest, (const unsigned char *)src, n);
 	return (dest);
 }
 
