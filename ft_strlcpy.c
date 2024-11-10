@@ -6,7 +6,7 @@
 /*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:28:47 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/09 23:10:17 by aayoub           ###   ########.fr       */
+/*   Updated: 2024/11/10 02:37:56 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+	if (size == 0)
+		return (ft_strlen(src));
 	i = 0;
-	while (src[i] != '\0' && size > i)
+	while (src[i] != '\0' && size - 1 > i)
 	{
 		dst[i] = src[i];
 		i++;
