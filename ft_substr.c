@@ -6,33 +6,48 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:40:16 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/12 13:19:12 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:10:07 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-        char    *str;
-        size_t  i;
+	char	*dst;
+	size_t	d_size;
+	size_t	s_size;
 
-        str = (char *)malloc((len + 1) * sizeof(char));
-        if (!str)
-                return ((char *)0);
-        i = 0;
-        while (s[i] && i < len)
+	s_size = ft_strlen(s);
+	if (len > s_size)
+		len = ft_strlen(s);
+	if (start >= s_size)
 	{
-		str[i] = s[i];
-		i++;
+		dst = (char *)malloc(sizeof(char));
+		dst[0] = '\0';
+		return (dst);
 	}
-	str[i] = '\0';
-	return (str);
+	if (len < s_size)
+		d_size = len + 1;
+	else
+		d_size = s_size - start + 1;
+	dst = (char *)malloc(d_size * sizeof(char));
+	if (!dst)
+		return ((char *)0);
+	ft_strlcpy(dst, s + start, d_size);
+	return (dst);
 }
 
-/* int     main(void)
-{
-        char    str1[] = "Bonjour tout le monde";
-
-        printf("%s", ft_substr(str1, 1, 7));
-} */
+// int     main(void)
+// {
+//         char *str = "9";
+//         unsigned int size = 0;
+//         char *ret = ft_substr("0123456789", 9, 10);
+//         printf("$%s<\n", ret);
+//         if (strncmp(str, ret, ft_strlen(str)) != 0)
+//         {
+//                 printf("failure");
+//                 return (1);
+//         }
+//         printf("success");
+// }
