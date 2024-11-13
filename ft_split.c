@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:52:35 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/13 15:48:00 by aboumall         ###   ########.fr       */
+/*   Created: 2024/11/13 14:15:13 by aboumall          #+#    #+#             */
+/*   Updated: 2024/11/13 15:36:54 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char    **ft_split(char const *s, char c)
 {
-	int	i;
-
-	i = 0;
-	c = (unsigned char)c;
-	while (s[i])
-	{
-		if ((unsigned char)s[i] == c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if (c == '\0')
-		return ((char *)&s[i]);
-	return ((char *)0);
+        
 }
-
-// int     main(void)
-// {
-// 		char str[] = "teste";
-// 		char    c = 1024;
-
-// 		printf("ft_strchr : $%s<", ft_strchr(str, c));
-// 		printf("\nstrchr : $%s<\n", strchr(str, c));
-// }
