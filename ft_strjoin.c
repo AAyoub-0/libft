@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:26:04 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/12 17:03:05 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:24:14 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char    *ft_strjoin(char const *s1, char const *s2)
         if (s2[0] == '\0' && s1[0] == '\0')
         {
                 str = (char *)malloc(sizeof(char));
+                if (!str)
+                        return ((char *)0);
                 str[0] = '\0';
                 return (str);
         }

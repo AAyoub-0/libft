@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:40:16 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/12 16:10:07 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:22:50 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= s_size)
 	{
 		dst = (char *)malloc(sizeof(char));
+                if (!dst)
+                        return ((char *)0);
 		dst[0] = '\0';
 		return (dst);
 	}
@@ -40,9 +42,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int     main(void)
 // {
-//         char *str = "9";
+//         char *str = "la";
 //         unsigned int size = 0;
-//         char *ret = ft_substr("0123456789", 9, 10);
+//         char *ret = ft_substr("hola", 2, 3);
+        
 //         printf("$%s<\n", ret);
 //         if (strncmp(str, ret, ft_strlen(str)) != 0)
 //         {

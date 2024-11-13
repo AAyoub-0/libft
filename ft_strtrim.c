@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:37:29 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/13 14:14:19 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:28:40 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (size == 1)
 	{
 		trim = (char *)malloc(sizeof(char));
+                if (!trim)
+                        return ((char *)0);
 		trim[0] = '\0';
 		return (trim);
 	}
