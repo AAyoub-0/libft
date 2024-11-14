@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:37:29 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/13 18:28:40 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:11:48 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static size_t	trimed_len(char const *s1, char const *set, size_t *start,
 		return (0);
 	while (is_in_set(s1[*end], set))
 		*end -= 1;
-        if (*start == *end)
-                return (1);
+	if (*start == *end)
+		return (1);
 	return (*end - *start);
 }
 
@@ -65,13 +65,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (size == 1)
 	{
 		trim = (char *)malloc(sizeof(char));
-                if (!trim)
-                        return ((char *)0);
+		if (!trim)
+			return ((char *)0);
 		trim[0] = '\0';
 		return (trim);
 	}
-        if (start == end)
-                size = 1;
+	if (start == end)
+		size = 1;
 	trim = (char *)malloc((size + 1) * sizeof(char));
 	if (!trim)
 		return ((char *)0);
@@ -81,15 +81,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /* int     main(void)
 {
-        char *s1 = "";
-        char *s2 = "d";
-        char *ret = ft_strtrim("abcdba", "acb");
+		char *s1 = "";
+		char *s2 = "d";
+		char *ret = ft_strtrim("abcdba", "acb");
 
-        printf("%s\n", ret);
-        if (!strcmp(ret, s2))
-        {
-                        printf("success");
-                        return (0);
-        }
-        printf("failure");
+		printf("%s\n", ret);
+		if (!strcmp(ret, s2))
+		{
+						printf("success");
+						return (0);
+		}
+		printf("failure");
 } */
