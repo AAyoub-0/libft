@@ -6,13 +6,13 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:14:05 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/14 17:00:21 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/14 17:34:47 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	int_len(int n)
+static size_t	int_len(int n)
 {
 	size_t	size;
 
@@ -32,20 +32,7 @@ size_t	int_len(int n)
 	return (size);
 }
 
-int	power(int n, size_t p)
-{
-	int	res;
-
-	res = n;
-	while (p > 1)
-	{
-		res *= n;
-		p--;
-	}
-	return (res);
-}
-
-char	*convert_int(char *res, int n, int is_neg)
+static char	*convert_int(char *res, int n, int is_neg)
 {
 	int		r;
 	int		i;
