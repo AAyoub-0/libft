@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:26:45 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/14 17:56:08 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/14 18:00:17 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
@@ -46,6 +47,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
+void	ft_putchar_fd(char c, int fd);
 void	ft_bzero(void *s, size_t n);
 
 #endif
