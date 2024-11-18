@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:01:57 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/13 20:28:39 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:37:49 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;
 
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
+	if (nmemb != 0 && size > SIZE_MAX / nmemb)
+		return (NULL);
 	array = malloc(nmemb * size);
 	if (array == NULL)
 		return (NULL);
