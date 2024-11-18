@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:26:45 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/18 14:06:07 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:38:17 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlen(const char *tab);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
+t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
