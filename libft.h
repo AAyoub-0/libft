@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:26:45 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/18 15:20:49 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:11:23 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ char				**ft_split(char const *s, char c);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				*ft_memchr(const void *s, int c, size_t n);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstadd_back(t_list **lst, t_list *new);
