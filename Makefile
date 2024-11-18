@@ -41,18 +41,25 @@ SRC = 	ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
+BONUS = ft_lstnew.c \
+	ft_lstadd_front.c
+
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $@ $(OBJ)
 
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	rm -f $(OBJ) $(NAME)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)
