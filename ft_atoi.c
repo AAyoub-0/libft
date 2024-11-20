@@ -6,13 +6,13 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:27:51 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/20 18:19:09 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:39:30 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_toolarge(long int result, int n)
+static int	is_toolarge(long int result, int n)
 {
 	if (result > (LONG_MAX - (n - '0')) / 10)
 		return (-1);
@@ -21,7 +21,7 @@ int	is_toolarge(long int result, int n)
 	return (1);
 }
 
-int	is_valid(int n)
+static int	is_valid(int n)
 {
 	if (n == '-' || n == '+' || !ft_isdigit(n))
 		return (0);
