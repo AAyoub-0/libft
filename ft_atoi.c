@@ -6,17 +6,33 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:27:51 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/08 13:13:32 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:19:09 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	is_toolarge(long int result, int n)
+{
+	if (result > (LONG_MAX - (n - '0')) / 10)
+		return (-1);
+	if (-result > (LONG_MAX - (n - '0')) / 10)
+		return (0);
+	return (1);
+}
+
+int	is_valid(int n)
+{
+	if (n == '-' || n == '+' || !ft_isdigit(n))
+		return (0);
+	return (1);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	result;
-	int	sign;
+	ssize_t	result;
+	int		i;
+	int		sign;
 
 	i = 0;
 	result = 0;
@@ -27,20 +43,22 @@ int	ft_atoi(const char *nptr)
 	{
 		if (nptr[i] == '-')
 			sign *= -1;
-		if (nptr[i + 1] == '-' || nptr[i + 1] == '+'
-			|| !ft_isdigit(nptr[i + 1]))
+		if (!is_valid(nptr[i + 1]))
 			return (0);
 		i++;
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
+		if (is_toolarge(result, nptr[i]) <= 0)
+			return (is_toolarge(result, nptr[i]));
 		result = result * 10 + nptr[i] - '0';
 		i++;
 	}
 	return (result * sign);
 }
 
-/* int     main(void)
+/* int	main(void)
 {
-
+	printf("FT_ATOI %d\n", ft_atoi("9223372036854775815"));
+	printf("ATOI %d\n", atoi("9223372036854775815"));
 } */

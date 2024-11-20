@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:45:15 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/08 12:57:24 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/19 17:58:08 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ size_t	ft_strlen(const char *tab)
 	return (size);
 }
 
-/* int	main(void)
-{
-	char tab[] = "0123456789";
+// int	main(void)
+// {
+// 	char tab[] = "0123456789";
 
-	printf("%ld", ft_strlen(tab));
-} */
+// 	printf("%ld", ft_strlen("\0"));
+// 	// printf("%ld", strlen("\0"));
+// }

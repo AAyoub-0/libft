@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:14:05 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/14 17:34:47 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/19 18:03:49 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	*ft_itoa(int n)
 
 /* int     main(void)
 {
-		int     n = -9;
+		int     n = -1;
 
 		// printf("%s", convert_int(res, n));
 		printf("%s\n", ft_itoa(n));

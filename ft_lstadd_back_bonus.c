@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:21:00 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/19 16:46:15 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:10:25 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (!lst || !new)
+		return ;
 	last = ft_lstlast(*lst);
 	if (last)
 		last->next = new;

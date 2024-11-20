@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:16:54 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/18 14:03:54 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:11:01 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ t_list	*ft_lstnew(void *content)
 
 /* int     main(void)
 {
-        char    *str = "new content";
-        t_list  *lst;
+		char    *str = "new content";
+		t_list  *lst;
 
-        lst = ft_lstnew(str);
+		lst = ft_lstnew(NULL);
 } */

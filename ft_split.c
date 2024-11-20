@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:15:13 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/14 18:53:35 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:09:48 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static size_t	get_word_index(char const *s, char c, size_t i)
 		}
 		if (count == i)
 		{
-			while (s[j - 1] != c && j > 0)
+			while (j > 0 && s[j - 1] != c)
 				j--;
 			return (j);
 		}
@@ -120,13 +120,13 @@ char	**ft_split(char const *s, char c)
 {
 	char str[] = "";
 	char **dst;
-        int c = '-';
+		int c = '-';
 	int i;
 
-        printf("word count : [%d]\n", count_word(str, c));
-        // printf("word size : [%d]\n", str_size(str + get_word_index(str, c,
+		printf("word count : [%d]\n", count_word(str, c));
+		// printf("word size : [%d]\n", str_size(str + get_word_index(str, c,
 			1), c));
-        // printf("str size for cpy : [%d]\n", str_size(str
+		// printf("str size for cpy : [%d]\n", str_size(str
 	// 			+ get_word_index(str, c, 5), c) + 1);
 
 	// dst = ft_split(str, c);
@@ -140,9 +140,9 @@ char	**ft_split(char const *s, char c)
 	// 	free(dst[i]);
 	// 	i++;
 	// }
-        // printf("dst[%d] = %s\n", i, dst[i]);
+		// printf("dst[%d] = %s\n", i, dst[i]);
 	// free(dst[i]);
-        // free(dst);
+		// free(dst);
 
 	return (0);
 } */

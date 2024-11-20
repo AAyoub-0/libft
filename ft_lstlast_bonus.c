@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:37:39 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/18 15:19:45 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:10:54 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*current;
 
-	if (!lst)
-		return (NULL);
+	current = NULL;
 	while (lst)
 	{
 		current = lst;
