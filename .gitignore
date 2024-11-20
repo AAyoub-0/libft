@@ -20,12 +20,12 @@
 /debug/
 /release/
 /dist/
+/libftTester/
 
 # Ignore les fichiers générés par CMake
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
-Makefile
 
 # Ignore les logs et fichiers de debug
 *.log
