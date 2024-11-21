@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:47:29 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/13 18:00:00 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:19:06 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j = 0;
 		i++;
 	}
-	return ((char *)0);
+	return (NULL);
 }
 
 // int main(void)

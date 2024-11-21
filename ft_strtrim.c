@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:37:29 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/14 14:11:48 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:18:53 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,33 +63,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	size = trimed_len(s1, set, &start, &end) + 1;
 	if (size == 1)
-	{
-		trim = (char *)malloc(sizeof(char));
-		if (!trim)
-			return ((char *)0);
-		trim[0] = '\0';
-		return (trim);
-	}
+		return (ft_strdup("\0"));
 	if (start == end)
 		size = 1;
 	trim = (char *)malloc((size + 1) * sizeof(char));
 	if (!trim)
-		return ((char *)0);
+		return (NULL);
 	trim = strcpy_trim(trim, s1, start, end);
 	return (trim);
 }
-
-/* int     main(void)
-{
-		char *s1 = "";
-		char *s2 = "d";
-		char *ret = ft_strtrim("abcdba", "acb");
-
-		printf("%s\n", ret);
-		if (!strcmp(ret, s2))
-		{
-						printf("success");
-						return (0);
-		}
-		printf("failure");
-} */

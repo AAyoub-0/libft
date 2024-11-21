@@ -6,13 +6,13 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:43:34 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/08 12:54:58 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:15:34 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if (!(c >= 97 && c <= 122))
+	if (!(c >= 'a' && c <= 'z'))
 		return (c);
 	return (c - 32);
 }

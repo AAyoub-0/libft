@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:22:37 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/20 18:10:35 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:14:45 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-/* int     main(void)
-{
-		t_list  **lst;
-
-		ft_lstadd_back(lst, ft_lstnew("lorem"));
-		ft_lstadd_back(lst, ft_lstnew("ipsum"));
-		ft_lstadd_back(lst, ft_lstnew("asdasd"));
-} */

@@ -6,7 +6,7 @@
 /*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:15:13 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/20 18:09:48 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/21 20:13:47 by aboumall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,34 +115,3 @@ char	**ft_split(char const *s, char c)
 	strs[word_count] = NULL;
 	return (strs);
 }
-
-/* int	main(void)
-{
-	char str[] = "";
-	char **dst;
-		int c = '-';
-	int i;
-
-		printf("word count : [%d]\n", count_word(str, c));
-		// printf("word size : [%d]\n", str_size(str + get_word_index(str, c,
-			1), c));
-		// printf("str size for cpy : [%d]\n", str_size(str
-	// 			+ get_word_index(str, c, 5), c) + 1);
-
-	// dst = ft_split(str, c);
-	// if (!dst)
-	// 	return (1);
-
-	// i = 0;
-	// while (dst[i] != NULL)
-	// {
-	// 	printf("dst[%d] = %s\n", i, dst[i]);
-	// 	free(dst[i]);
-	// 	i++;
-	// }
-		// printf("dst[%d] = %s\n", i, dst[i]);
-	// free(dst[i]);
-		// free(dst);
-
-	return (0);
-} */
