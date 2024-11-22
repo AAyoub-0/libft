@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:14:05 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/19 18:03:49 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:31:47 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,7 @@ char	*ft_itoa(int n)
 	int		is_neg;
 
 	if (n == -2147483648)
-	{
-		res = (char *)malloc(12 * sizeof(char));
-		if (!res)
-			return (NULL);
-		ft_strlcpy(res, "-2147483648", 12);
-		return (res);
-	}
+		return (ft_strdup("-2147483648"));
 	is_neg = 0;
 	size = int_len(n);
 	res = (char *)malloc((size + 1) * sizeof(char));
@@ -86,11 +80,3 @@ char	*ft_itoa(int n)
 	res = convert_int(res, n, is_neg);
 	return (res);
 }
-
-/* int     main(void)
-{
-		int     n = -1;
-
-		// printf("%s", convert_int(res, n));
-		printf("%s\n", ft_itoa(n));
-} */

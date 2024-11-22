@@ -2,9 +2,7 @@ NAME = libft.a
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -Iincludes -g
-
-SRC_DIR = src
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRC = 	ft_isalpha.c \
 	ft_memset.c \
@@ -62,7 +60,7 @@ $(NAME): $(OBJ)
 bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h Makefile
+./%.o: ./%.c libft.h Makefile
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:

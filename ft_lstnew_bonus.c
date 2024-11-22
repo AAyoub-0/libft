@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:16:54 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/20 18:11:01 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:32:22 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ t_list	*ft_lstnew(void *content)
 	lst->next = NULL;
 	return (lst);
 }
-
-/* int     main(void)
-{
-		char    *str = "new content";
-		t_list  *lst;
-
-		lst = ft_lstnew(NULL);
-} */

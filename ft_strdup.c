@@ -6,7 +6,7 @@
 /*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:28:37 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/10 02:41:10 by aayoub           ###   ########.fr       */
+/*   Updated: 2024/11/22 21:42:00 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strdup(const char *s)
 	dup[i] = '\0';
 	return (dup);
 }
-
-/* int     main(void)
-{
-		char    src[] = "Bonjour";
-		char    *dup;
-
-		dup = ft_strdup(src);
-		printf("%s", dup);
-} */

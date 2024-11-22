@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:37:39 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/20 18:10:54 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:32:15 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (current);
 }
-
-/* int     main(void)
-{
-		t_list  *alst;
-				t_list  *last;
-		t_list  val1;
-		t_list  val2;
-		t_list  val3;
-
-		val1.content = "dasdsadasd";
-		val2.content = "dasdsadasd";
-		val3.content = "dasdsadasd";
-		val1.next = &val2;
-		val2.next = &val3;
-		val3.next = NULL;
-
-		alst = &val1;
-
-		last = ft_lstlast(alst);
-} */

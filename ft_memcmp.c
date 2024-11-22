@@ -6,7 +6,7 @@
 /*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:43:55 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/10 00:23:55 by aayoub           ###   ########.fr       */
+/*   Updated: 2024/11/22 21:32:51 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (*str1 - *str2);
 }
-
-// int	main(void)
-// {
-// 	char str1[] = {0, 0, 127, 0, 10};
-// 	char str2[] = {0, 0, 127, 0, 0};
-// 	int	size = 4;
-
-// 	int	ret = memcmp(str1, str2, size);
-// 	int	ret1 = ft_memcmp(str1, str2, size);
-// 	printf("memcmp : return : %d", ret);
-// 	printf("\nft_memcmp : return : %d", ret1);
-// 	if (ret == ret1)
-// 		puts("\nTEST SUCCESS");
-// 	else
-// 		puts("\nTEST FAILED");
-// }

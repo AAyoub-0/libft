@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:52:35 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/13 15:48:00 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:41:34 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)&s[i]);
-	return ((char *)0);
+	return (NULL);
 }
-
-// int     main(void)
-// {
-// 		char str[] = "teste";
-// 		char    c = 1024;
-
-// 		printf("ft_strchr : $%s<", ft_strchr(str, c));
-// 		printf("\nstrchr : $%s<\n", strchr(str, c));
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:27:51 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/20 18:39:30 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 20:54:04 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-/* int	main(void)
-{
-	printf("FT_ATOI %d\n", ft_atoi("9223372036854775815"));
-	printf("ATOI %d\n", atoi("9223372036854775815"));
-} */

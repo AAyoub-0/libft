@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:05:31 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/19 20:30:26 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:32:34 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
-
-/* int     main(void)
-{
-		t_list  *alst;
-		t_list  val1;
-		t_list  val2;
-		t_list  val3;
-
-		val1.content = "dasdsadasd";
-		val2.content = "dasdsadasd";
-		val3.content = "dasdsadasd";
-		val1.next = NULL;
-		val2.next = NULL;
-		val3.next = NULL;
-
-		alst = &val1;
-
-		printf("%d", ft_lstsize(NULL));
-} */

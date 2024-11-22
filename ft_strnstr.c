@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboumall <aboumall@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aayoub <aayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:47:29 by aboumall          #+#    #+#             */
-/*   Updated: 2024/11/21 20:19:06 by aboumall         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:50:45 by aayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	char haystack[30] = "aaabcabcd";
-// 	char needle[10] = "cd";
-// 	char * empty = (char*)"";
-
-// 	char *result = ft_strnstr(haystack, needle, 8);
-// 	printf("$%s<\n", result);
-// 	if (result == NULL)
-// 		write(1, "OK", 2);
-// 	else
-// 		write(1, "KO", 2);
-// 	write(1, "\n", 1);
-// 	return (0);
-// }
