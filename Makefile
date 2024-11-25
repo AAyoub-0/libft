@@ -57,8 +57,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $@ $(OBJ)
 
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+bonus: $(NAME) $(BONUS_OBJ)
+	ar rcs $(NAME) $(BONUS_OBJ)
 
 ./%.o: ./%.c libft.h Makefile
 	$(CC) -o $@ -c $< $(CFLAGS)
